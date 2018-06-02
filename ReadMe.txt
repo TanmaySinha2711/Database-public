@@ -8,5 +8,5 @@ object: http://cs5200-pr1-tanmay.herokuapp.com/api/hello/object
 
 PR2:
 insert: http://cs5200-pr1-tanmay.herokuapp.com/api/hello/insert
-insert message: http://cs5200-pr1-tanmay.herokuapp.com/api/hello/string/insert/{msg}
-select: http://cs5200-pr1-tanmay.herokuapp.com/api/hello/string/select/all
+insert message: http://cs5200-pr1-tanmay.herokuapp.com/api/hello/insert/{msg}
+select: http://cs5200-pr1-tanmay.herokuapp.com/api/hello/select/all
