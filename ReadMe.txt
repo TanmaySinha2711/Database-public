@@ -6,7 +6,7 @@ index.html: http://cs5200-pr1-tanmay.herokuapp.com
 string: http://cs5200-pr1-tanmay.herokuapp.com/api/hello/string
 object: http://cs5200-pr1-tanmay.herokuapp.com/api/hello/object
 
-PR2:
-insert: http://cs5200-pr1-tanmay.herokuapp.com/api/hello/insert
-insert message: http://cs5200-pr1-tanmay.herokuapp.com/api/hello/insert/{msg}
-select: http://cs5200-pr1-tanmay.herokuapp.com/api/hello/select/all
+PR2: ## Integrating Spring Boot with MySQL
+[Insert a static hello message](http://cs5200-pr1-tanmay.herokuapp.com/api/hello/insert)
+[Insert a parameterized hello message](http://cs5200-pr1-tanmay.herokuapp.com/api/hello/insert/Some parameterized message)
+[Retrieve all hello messages](http://cs5200-pr1-tanmay.herokuapp.com/api/hello/select/all)
