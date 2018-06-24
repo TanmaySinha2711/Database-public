@@ -23,6 +23,40 @@ public class WidgetDao {
 		return instance;
 	}
 	
+	public void createWidgetForPage(int pageId, Widget widget) {
+		Connection con = JdbcConnection.getConnection();
+		PreparedStatement stmt = null;
+		String sql = "insert into widget"
+				+ "(ID, pageID, name, width, height, cssClass, cssStyle, order) "
+				+ "values (?, ?, ?, ?, ?, ?, ?, ?)";
+		try {
+			stmt = con.prepareStatement(sql);
+			
+			stmt.setInt(1, widget.getWidget_id());
+			stmt.setInt(2, pageId);
+			stmt.setString(3, widget.getText());
+			stmt.setInt(4, widget.getWidth());
+			stmt.setInt(5, widget.getHealth());
+			stmt.setString(6, widget.getCssClass());
+			stmt.setString(7, widget.getCssStyle());
+			stmt.setInt(8, widget.getOrder());
+			
+			stmt.executeUpdate();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				con.close();
+				stmt.close();
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
 	public void createYoutubeWidgetForPage(int pageId, YouTubeWidget widget) {
 		Connection con = JdbcConnection.getConnection();
 		PreparedStatement stmt = null;
