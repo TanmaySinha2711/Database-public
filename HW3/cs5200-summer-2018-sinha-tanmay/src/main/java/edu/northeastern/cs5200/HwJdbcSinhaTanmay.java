@@ -206,6 +206,27 @@ public class HwJdbcSinhaTanmay {
 	
 	public static void executeUpdates() {
 		//update 1
+		WidgetDao wid_dao = WidgetDao.getInstance();
+		Collection<Widget> wids = wid_dao.findAllWidgets();
+		
+		//update order
+		int found = 0;
+		for(Widget w: wids) {
+			if(w.getName().equals("head123")) {
+				w.setOrder(3);
+				found = 1;
+				break;
+			}
+		}
+		
+		//if order is updated for head, update for rest of widgets after it in queue
+		if(found == 1)
+			for(Widget w: wids) {
+				if(w.getOrder() > 3) {
+					w.setOrder(w.getOrder() + 1);
+				}
+			}
+		
 		
 		//update 2
 		int cnet_id = 0;

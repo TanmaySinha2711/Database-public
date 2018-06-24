@@ -23,9 +23,10 @@ public class Cs5200Summer2018SinhaTanmayApplication {
 		HwJdbcSinhaTanmay.addWidgets();
 		
 		//update queries
+		HwJdbcSinhaTanmay.executeUpdates();
 		
 		//delete queries
-		
+		HwJdbcSinhaTanmay.executeDeletes();
 	}
 	
 /*	////////////////functions to call developerDAO functions//////////////////////////////////
